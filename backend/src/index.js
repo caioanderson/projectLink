@@ -4,6 +4,13 @@ const db = require('./models/index');
 const authController = require('./controllers/auth');
 const app = express();
 
+//Receber dados em forma JSON
+app.use(express.json());
+
+//Pegar Body da requisição e entender
+app.use(express.urlencoded({ extended: false }));
+
+
 app.use('/auth', authController);
 
 app.get('/', (req, res) => {
