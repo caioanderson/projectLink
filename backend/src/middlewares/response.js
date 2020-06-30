@@ -28,7 +28,7 @@ const jsonBadRequest = function(data, message, metadata) {
 
 const jsonUnauthorization = function(data, message, metadata) {
     const status = STATUS_CODE_UNAUTHORIZED;
-    message = (message) ? message : 'Bad request.'
+    message = (message) ? message : 'Unauthorization'
     metadata = (metadata) ? metadata : {};
 
     this.status(status);
@@ -38,7 +38,7 @@ const jsonUnauthorization = function(data, message, metadata) {
 
 const jsonNotFound = function(data, message, metadata) {
     const status = STATUS_CODE_NOT_FOUND;
-    message = (message) ? message : 'Bad request.'
+    message = (message) ? message : 'Not Found'
     metadata = (metadata) ? metadata : {};
 
     this.status(status);
@@ -48,7 +48,7 @@ const jsonNotFound = function(data, message, metadata) {
 
 const jsonServerError = function(data, message, metadata) {
     const status = STATUS_CODE_SERVER_ERROR;
-    message = (message) ? message : 'Bad request.'
+    message = (message) ? message : 'Error on server'
     metadata = (metadata) ? metadata : {};
 
     this.status(status);
