@@ -1,12 +1,15 @@
 const express = require('express');
 const db = require('./models/index');
 const response = require('./middlewares/response');
+const checkJwt = require('./middlewares/jsw');
+
 
 const authController = require('./controllers/auth');
 const linkController = require('./controllers/link');
 const app = express();
 
 app.use(response);
+app.use(checkJwt);
 
 //Receber dados em forma JSON
 app.use(express.json());
